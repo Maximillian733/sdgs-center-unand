@@ -1,0 +1,154 @@
+:root{--navy:#103c33;--navy2:#20604d;--gold:#ecc76f;--gold-d:#ac8035;--ink:#16332b;--mute:#61736c;--bg:#f3f7f4;--line:#dbe6df;--white:#fff;--err:#b42318;--ok:#146c43;--r:10px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+img,video{max-width:100%;display:block}a{color:var(--navy2)}h1,h2,h3{line-height:1.25;margin:0 0 .5em}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);padding:.5rem 1rem;z-index:99}.skip:focus{left:0}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+/* header */
+.hdr{position:absolute;inset:0 0 auto;z-index:10;color:#fff}.hdr.solid{position:static;background:var(--navy)}
+.hdr .wrap{display:flex;align-items:center;gap:20px;min-height:76px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:700;letter-spacing:.06em}.logo small{display:block;font-weight:400;font-size:.65rem;color:var(--gold);letter-spacing:.2em}
+.logo svg{width:34px;height:34px}
+.nav{display:flex;gap:22px;margin-left:auto;align-items:center;flex-wrap:wrap}.nav a{color:#fff;text-decoration:none;font-size:.92rem;padding:4px 0;border-bottom:2px solid transparent}
+.nav a:hover,.nav a[aria-current=page]{border-color:var(--gold)}
+.nav .btn-line{border:1px solid rgba(255,255,255,.55);padding:7px 16px;border-radius:6px}
+.srch{display:flex}.srch input{width:150px;padding:7px 10px;border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.12);color:#fff;border-radius:6px 0 0 6px}
+.srch input::placeholder{color:#d5dbe8}.srch button{border:0;background:var(--gold);color:var(--navy);padding:0 12px;border-radius:0 6px 6px 0;cursor:pointer;font-weight:600}
+.lang{display:flex;gap:4px;font-size:.85rem}.lang a{padding:3px 8px;border:1px solid rgba(255,255,255,.4);border-radius:5px}.lang a[aria-current=true]{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.burger{display:none;margin-left:auto;background:none;border:1px solid #fff;color:#fff;padding:6px 12px;border-radius:6px;font-size:1rem}
+/* hero */
+.hero{background:linear-gradient(160deg,rgba(14,24,44,.93),rgba(34,52,90,.86)),repeating-linear-gradient(45deg,#16233b 0 14px,#1b2c4b 14px 28px);color:#fff;padding:150px 0 130px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-90px;top:40px;width:520px;height:520px;border-radius:50%;border:70px solid rgba(201,164,107,.16)}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);max-width:640px}.hero p{max-width:520px;color:#dbe2f0;font-size:1.05rem}
+.btn{display:inline-block;background:var(--gold);color:var(--navy);padding:10px 22px;border-radius:6px;text-decoration:none;font-weight:600;border:1px solid var(--gold);cursor:pointer;font-size:.95rem}
+.btn:hover{background:#d8b57e}.btn.line{background:transparent;color:inherit;border-color:rgba(255,255,255,.6)}.btn.dark{background:var(--navy);color:#fff;border-color:var(--navy)}.btn.sm{padding:5px 12px;font-size:.85rem}.btn.red{background:var(--err);border-color:var(--err);color:#fff}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:-70px;position:relative;z-index:2}
+.card{background:#fff;border-radius:var(--r);box-shadow:0 8px 28px rgba(20,35,60,.1);padding:26px;text-align:center}
+.card .ic{font-size:1.8rem;color:var(--gold-d)}.card h3{font-size:1.1rem}.card p{color:var(--mute);font-size:.92rem;margin:.3rem 0 .8rem}
+a.card{text-decoration:none;color:inherit;transition:transform .15s}a.card:hover{transform:translateY(-3px)}
+section{padding:64px 0}.sec-h{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:26px;flex-wrap:wrap}.sec-h h2{font-size:1.8rem;margin:0}
+.btn-o{border:1px solid var(--line);background:#fff;color:var(--ink);padding:8px 18px;border-radius:6px;text-decoration:none;font-size:.9rem}
+/* sdg */
+.sdgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.sdg{display:flex;flex-direction:column;gap:4px;background:var(--c);color:#fff;text-decoration:none;padding:12px;border-radius:8px;min-height:92px;font-size:.78rem;line-height:1.3;border:3px solid transparent}
+.sdg b{font-size:1.5rem;line-height:1}.sdg[aria-current=true]{border-color:var(--navy);box-shadow:0 0 0 2px #fff inset}
+.pill{display:inline-block;background:var(--c,#555);color:#fff;border-radius:99px;padding:1px 9px;font-size:.72rem;margin:2px 3px 0 0;text-decoration:none}
+/* grid & news */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.item{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 4px 16px rgba(20,35,60,.07);display:flex;flex-direction:column}
+.item .cov{aspect-ratio:16/10;object-fit:cover;width:100%;background:linear-gradient(135deg,var(--navy),var(--navy2))}
+.ph{aspect-ratio:16/10;background:linear-gradient(135deg,var(--navy),var(--navy2));display:grid;place-items:center;color:var(--gold);font-size:2rem}
+.item .bd{padding:16px 18px 20px}.item h3{font-size:1.05rem}.item h3 a{text-decoration:none;color:var(--ink)}.meta{font-size:.8rem;color:var(--mute)}
+.tag{background:#eef1f7;color:var(--navy2);border-radius:5px;padding:1px 8px;font-size:.75rem;text-transform:capitalize}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.panel{background:linear-gradient(135deg,var(--navy),var(--navy2));border-radius:var(--r);min-height:300px;display:grid;grid-template-columns:repeat(6,1fr);gap:6px;padding:22px;align-content:center}
+.panel i{aspect-ratio:1;border-radius:6px;background:var(--c);opacity:.9}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}.filters select,.filters input{padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;font:inherit}
+.empty{background:#fff;border:1px dashed var(--line);border-radius:var(--r);padding:30px;text-align:center;color:var(--mute)}
+.pagination{display:flex;gap:6px;list-style:none;padding:0;justify-content:center;margin:28px 0 0;flex-wrap:wrap}.pagination a,.pagination span{display:block;padding:6px 12px;border:1px solid var(--line);border-radius:6px;background:#fff;text-decoration:none}.pagination .active span{background:var(--navy);color:#fff}
+.prose{max-width:760px}.prose p{margin:0 0 1em}.pagehead{background:var(--navy);color:#fff;padding:44px 0}.pagehead h1{margin:0}
+.table{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--r);overflow:hidden}.table th,.table td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}.table th{background:#eef1f7;font-size:.85rem}
+.scroll{overflow-x:auto}
+.people{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}.person{background:#fff;border-radius:var(--r);padding:18px;text-align:center;box-shadow:0 4px 16px rgba(20,35,60,.07)}
+.person img,.person .av{width:96px;height:96px;border-radius:50%;object-fit:cover;margin:0 auto 10px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-size:2rem}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}.thumb{padding:0;border:0;background:#000;border-radius:8px;overflow:hidden;cursor:pointer;aspect-ratio:1;position:relative}
+.thumb img,.thumb video{width:100%;height:100%;object-fit:cover}.thumb .pl{position:absolute;inset:auto 6px 6px auto;background:rgba(0,0,0,.7);color:#fff;border-radius:4px;padding:0 6px;font-size:.75rem}
+dialog{border:0;border-radius:var(--r);padding:0;max-width:92vw;background:#0d1524;color:#fff}dialog::backdrop{background:rgba(0,0,0,.8)}
+dialog img,dialog video{max-height:78vh;max-width:90vw}dialog .cap{padding:10px 16px;font-size:.9rem}dialog button{position:absolute;right:8px;top:8px;background:var(--gold);border:0;border-radius:6px;padding:4px 12px;cursor:pointer}
+/* footer */
+.ftr{background:#0f1a2e;color:#c8d0e0;padding:48px 0 24px;font-size:.92rem}.ftr .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}.ftr h3{color:#fff;font-size:1rem}.ftr a{color:var(--gold)}.copy{border-top:1px solid #243452;margin-top:28px;padding-top:16px;text-align:center;grid-column:1/-1;font-size:.8rem}
+/* forms / admin */
+.flash{padding:12px 16px;border-radius:8px;margin:0 0 18px}.flash.ok{background:#e7f6ee;color:var(--ok)}.flash.err{background:#fdecea;color:var(--err)}
+.err-t{color:var(--err);font-size:.85rem;margin-top:3px}label{display:block;font-weight:600;font-size:.9rem;margin:14px 0 4px}
+.f input[type=text],.f input[type=password],.f input[type=email],.f input[type=number],.f input[type=date],.f input[type=file],.f select,.f textarea{width:100%;padding:9px 11px;border:1px solid #b7bfce;border-radius:6px;font:inherit;background:#fff}
+.f textarea{min-height:120px}.f .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}.f .chk{display:flex;gap:8px;align-items:center;font-weight:400;margin:10px 0}
+.sdgchk{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:2px 12px}.sdgchk label{font-weight:400;display:flex;gap:6px;align-items:center;margin:3px 0}
+.adm{display:grid;grid-template-columns:230px 1fr;min-height:100vh}.side{background:var(--navy);color:#fff;padding:22px 16px}.side a{display:block;color:#d5dbe8;text-decoration:none;padding:9px 12px;border-radius:6px;margin-bottom:2px}.side a[aria-current=page],.side a:hover{background:var(--navy2);color:#fff}
+.main{padding:28px;min-width:0}.stat{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:16px}.stat .card{text-align:left}.stat b{font-size:2rem;display:block}
+.box{background:#fff;border-radius:var(--r);padding:20px;box-shadow:0 4px 16px rgba(20,35,60,.07);margin-bottom:22px}.acts{display:flex;gap:6px;flex-wrap:wrap}.acts form{margin:0}
+.login{max-width:410px;margin:9vh auto;background:#fff;padding:30px;border-radius:var(--r);box-shadow:0 10px 30px rgba(20,35,60,.12)}
+@media(max-width:860px){.cards3,.about,.ftr .wrap{grid-template-columns:1fr}.adm{grid-template-columns:1fr}.side{display:flex;flex-wrap:wrap;gap:4px}.f .row{grid-template-columns:1fr}
+.burger{display:block}.nav{display:none;width:100%;flex-direction:column;align-items:flex-start;background:var(--navy);padding:14px 0;gap:12px}.nav.open{display:flex}.hdr .wrap{background:transparent}.hero{padding-top:120px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+
+/* ============================================================
+  TEMA UNAND: hijau tua + emas, logo SDGs resmi pilihan kelompok.
+  Foto: SpartacksCompatriot, CC BY 3.0.
+  https://commons.wikimedia.org/wiki/File:Andalas_University_rectorate.JPG
+  Jika ada public/images/gedung-unand.jpg, foto lokal diutamakan.
+  Jika tidak, browser memakai foto dari Wikimedia Commons (internet).
+============================================================ */
+
+/* Branding publik */
+.hdr .logo{gap:12px;letter-spacing:.045em;line-height:1.15}
+.hdr .logo img{width:52px;height:52px;object-fit:contain;flex:0 0 auto;filter:drop-shadow(0 2px 5px rgba(0,0,0,.16))}
+.hdr .logo small{margin-top:4px;letter-spacing:.14em;font-size:.62rem}
+
+/* Banner beranda dengan foto gedung Universitas Andalas. */
+.hero{
+ background-color:var(--navy);
+ background-image:
+   linear-gradient(90deg,rgba(6,42,33,.96) 0%,rgba(11,61,48,.87) 52%,rgba(12,60,48,.46) 100%),
+   url('../images/gedung-unand.jpg'),
+   url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Andalas_University_rectorate.JPG/1280px-Andalas_University_rectorate.JPG');
+ background-size:cover,cover,cover;
+ background-position:center,center 45%,center 45%;
+ background-repeat:no-repeat;
+ color:#fff;
+}
+.hero::after{display:none}
+.hero h1{max-width:720px;text-shadow:0 3px 22px rgba(0,0,0,.14)}
+.hero p{color:#e4f3ed}
+.hdr.solid{background:var(--navy)}
+.srch input{background:rgba(255,255,255,.14)}
+.srch input::placeholder{color:#e0e9e5}
+.ftr{background:#092e26;color:#d6e6de}
+.copy{border-top-color:rgba(255,255,255,.12);line-height:1.7}
+
+/* Admin sidebar dan identitas */
+.admin-brand{display:flex!important;gap:12px;align-items:center;margin:0 3px 24px!important;padding:10px 8px!important;border-radius:12px;text-decoration:none!important;color:#fff!important}
+.admin-brand img{width:54px;height:54px;flex:0 0 auto;object-fit:contain;background:rgba(255,255,255,.95);border-radius:50%;padding:3px}
+.admin-brand strong{font-size:1rem;display:block;line-height:1.25}
+.admin-brand small{display:block;font-size:.63rem;color:#e9cd88;letter-spacing:.1em;line-height:1.5;margin-top:4px}
+.side{background:#0d362e}
+.side a[aria-current=page],.side a:hover{background:#245c4b;color:#fff}
+
+/* Dashboard: foto gedung kampus menggantikan area yang polos */
+.dashboard-campus{
+ position:relative;min-height:272px;display:flex;align-items:flex-end;
+ margin:0 0 28px;padding:32px;overflow:hidden;border-radius:18px;
+ background-color:#185b48;
+ background-image:
+   linear-gradient(90deg,rgba(8,46,36,.97) 0%,rgba(12,66,50,.82) 52%,rgba(13,69,54,.25) 100%),
+   url('../images/gedung-unand.jpg'),
+   url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Andalas_University_rectorate.JPG/1280px-Andalas_University_rectorate.JPG');
+ background-size:cover,cover,cover;
+ background-position:center,center 43%,center 43%;
+ background-repeat:no-repeat;
+ box-shadow:0 12px 28px rgba(9,54,40,.14);color:#fff;
+}
+.dashboard-campus-content{position:relative;z-index:1;max-width:700px}
+.dashboard-kicker{color:#f2d17d;font-size:.76rem;letter-spacing:.17em;font-weight:800;text-transform:uppercase;margin:0 0 12px}
+.dashboard-campus h1{color:#fff;font-size:clamp(1.55rem,3vw,2.5rem);margin:0 0 10px;line-height:1.14}
+.dashboard-campus p:not(.dashboard-kicker){color:#e2efe8;max-width:550px;margin:0 0 18px}
+.dashboard-campus-link{display:inline-flex;align-items:center;gap:9px;color:#143d30!important;background:#f2cc78;border-radius:7px;padding:9px 18px;text-decoration:none;font-size:.89rem;font-weight:700}
+.dashboard-campus-link:hover{background:#f9dc9c}
+.dashboard-section-title{font-size:1.35rem;margin:0 0 16px}
+.stat .card{border:1px solid #e2ebe5;box-shadow:0 8px 24px rgba(11,58,43,.06);border-radius:13px}
+.stat .card b{color:#0e513d}
+.btn.dark{background:var(--navy);border-color:var(--navy)}
+.btn.dark:hover{background:var(--navy2);border-color:var(--navy2)}
+.login-brand{text-align:center;margin-bottom:12px}
+.login-brand img{display:inline-block;object-fit:contain;max-width:78px}
+@media(max-width:860px){
+ .dashboard-campus{min-height:250px;padding:24px;background-position:center,center,center}
+ .hdr .logo img{width:44px;height:44px}
+}
+@media(max-width:500px){
+ .dashboard-campus{min-height:275px;padding:22px;background-image:linear-gradient(90deg,rgba(8,46,36,.92),rgba(10,63,47,.68)),url('../images/gedung-unand.jpg'),url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Andalas_University_rectorate.JPG/1280px-Andalas_University_rectorate.JPG')}
+ .dashboard-campus h1{font-size:1.7rem}
+ .hdr .logo{gap:8px}
+ .hdr .logo small{font-size:.53rem}
+}
